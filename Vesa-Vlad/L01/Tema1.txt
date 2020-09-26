@@ -1,0 +1,10 @@
+Stack Overflow este un site pentru intrebari si raspunsuri din domeniul programarii.
+Functionalitati:
+-creare de cont si autentificare
+-crearea de postari pentru a pune intrebari odata autentificat
+-postarea raspunsurilor la intrebari
+-raspunsurile pot fi votate pozitiv sau negativ pentru a deveni sau nu mai relevante
+-raspunsul cel mai folositor poate fi marcat de cel care a pus intrebarea
+-adaugarea de tag-uri la intrebari pentru a putea fi gasite mai usor
+-un utilizator poate debloca privilegii in functie de cate voturi primeste
+-pentru a imbunatati calitatea raspunsurilor acestea pot fi editate si pot fi adaugate comentarii la acestea
