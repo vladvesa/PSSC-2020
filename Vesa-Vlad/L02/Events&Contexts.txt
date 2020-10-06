@@ -1,0 +1,19 @@
+Events:
+-creare post intrebare
+-postare raspuns la intrebare
+-stergere intrebare
+-stergere raspuns
+-editare intrebare
+-editare raspuns
+-votare raspuns
+-marcare raspuns ca fiind corect
+-adaugare tag
+-cautare dupa tag
+-deblocare privilegii in functie de reputatie
+
+Contexts:
+-question context
+-answer context
+-vote context
+-tag context
+-reputation context
