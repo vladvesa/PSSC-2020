@@ -1,8 +1,11 @@
 ﻿using Profile.Domain.CreateProfileWorkflow;
+using Question.Domain.CreateQuestionWorkflow;
 using System;
 using System.Collections.Generic;
 using System.Net;
 using static Profile.Domain.CreateProfileWorkflow.CreateProfileResult;
+using static Question.Domain.CreateQuestionWorkflow.CreateQuestionResult;
+using static Question.Domain.CreateQuestionWorkflow.CreateQuestionResult.QuestionCreated;
 
 namespace Test.App
 {
@@ -11,7 +14,9 @@ namespace Test.App
         static void Main(string[] args)
         {
             var cmd = new CreateProfileCmd("Ion", string.Empty, "Ionescu", "ion.inonescu@company.com");
+            
             var result = CreateProfile(cmd);
+            
 
             result.Match(
                     ProcessProfileCreated,
@@ -21,6 +26,8 @@ namespace Test.App
 
             Console.ReadLine();
         }
+
+        
 
         private static ICreateProfileResult ProcessInvalidProfile(ProfileValidationFailed validationErrors)
         {
@@ -63,5 +70,7 @@ namespace Test.App
             //execute logic
             return result;
         }
+
+        
     }
 }

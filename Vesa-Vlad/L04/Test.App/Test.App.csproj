@@ -6,7 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Choices" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Profile.Domain\Profile.Domain.csproj" />
+    <ProjectReference Include="..\Question.Domain\Question.Domain.csproj" />
   </ItemGroup>
 
 </Project>
