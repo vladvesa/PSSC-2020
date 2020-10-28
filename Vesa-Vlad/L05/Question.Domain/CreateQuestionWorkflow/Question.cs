@@ -23,7 +23,7 @@ namespace Question.Domain.CreateQuestionWorkflow
 
             private static bool IsQuestionValid(string question)
             {
-                if(question.Length <= 500)
+                if(question.Length <= 1000)
                 {
                     return true;
                 }
