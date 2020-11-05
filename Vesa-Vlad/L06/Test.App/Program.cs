@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using System.Net;
 using static Profile.Domain.CreateProfileWorkflow.CreateProfileResult;
 using static Profile.Domain.CreateProfileWorkflow.EmailAddress;
+using Reply.Domain;
+using Reply.Domain.ReplyWorkflow;
 
 namespace Test.App
 {
@@ -15,7 +17,6 @@ namespace Test.App
         static void Main(string[] args)
         {
             var emailResult = UnverifiedEmail.Create("te@test.com");
-
 
             emailResult.Match(
                     Succ: email =>
@@ -31,7 +32,6 @@ namespace Test.App
                         return Unit.Default;
                     }
                 );
-            
 
             Console.ReadLine();
         }

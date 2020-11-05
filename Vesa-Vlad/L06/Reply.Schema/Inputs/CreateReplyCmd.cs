@@ -6,11 +6,11 @@ namespace Reply.Domain.Inputs
 {
     public class CreateReplyCmd
     {
-        public string QuestionId { get; }
-        public string AuthorId { get; }
+        public int QuestionId { get; }
+        public int AuthorId { get; }
         public string ReplyBody { get; }
 
-        public CreateReplyCmd (string questionId, string authorId, string replyBody)
+        public CreateReplyCmd (int questionId, int authorId, string replyBody)
         {
             this.QuestionId = questionId;
             this.AuthorId = authorId;

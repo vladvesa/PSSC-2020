@@ -6,13 +6,13 @@ using System.Text;
 
 namespace Reply.Domain.ReplyWorkflow
 {
-    public class Reply
+    public class UnvalidatedReply
     {
-        public string QuestionId { get; }
-        public string AuthorId { get; }
+        public int QuestionId { get; }
+        public int AuthorId { get; }
         public string ReplyBody { get; }
 
-        public Reply (string questionId, string authorId, string replyBody)
+        public UnvalidatedReply (int questionId, int authorId, string replyBody)
         {
             this.QuestionId = questionId;
             this.AuthorId = authorId;

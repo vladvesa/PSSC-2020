@@ -11,9 +11,9 @@ namespace Reply.Domain.ReplyWorkflow
 
         public class ValidReply : ICreateReplyResult
         {
-            public Reply ReplyObj { get; private set; }
+            public UnvalidatedReply ReplyObj { get; private set; }
             
-            public ValidReply(Reply replyObj)
+            public ValidReply(UnvalidatedReply replyObj)
             {
                 this.ReplyObj = replyObj;
             }

@@ -6,11 +6,11 @@ namespace Reply.Domain.Inputs
 {
     public class AckToReplyAuthorCmd
     {
-        public string QuestionId { get; private set; }
-        public string ReplyId { get; private set; }
+        public int QuestionId { get; private set; }
+        public int ReplyId { get; private set; }
         public string ReplyBody { get; private set; }
 
-        public AckToReplyAuthorCmd(string questionId, string replyId, string replyBody)
+        public AckToReplyAuthorCmd(int questionId, int replyId, string replyBody)
         {
             this.QuestionId = questionId;
             this.ReplyId = replyId;

@@ -5,9 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CSharp.Choices" Version="1.1.0" />
-    <PackageReference Include="LanguageExt.Core" Version="3.4.15" />
-    <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
+    <ProjectReference Include="..\Primitives.IO\Primitives.IO.csproj" />
+    <ProjectReference Include="..\Reply.Schema\Reply.Schema.csproj" />
   </ItemGroup>
 
 </Project>
