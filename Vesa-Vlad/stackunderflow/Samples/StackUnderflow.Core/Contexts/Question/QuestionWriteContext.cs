@@ -1,4 +1,5 @@
 ﻿using StackUnderflow.DatabaseModel.Models;
+using StackUnderflow.EF.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,10 +8,10 @@ namespace StackUnderflow.Domain.Core.Contexts.Question
 {
     public class QuestionWriteContext
     {
-        public ICollection<QuestionModel> Questions { get; }
-        public QuestionWriteContext(ICollection<QuestionModel> questions)
+        public ICollection<Post> Questions { get; }
+        public QuestionWriteContext(ICollection<Post> questions)
         {
-            Questions = questions ?? new List<QuestionModel>();
+            Questions = questions ?? new List<Post>();
         }
     }
 }

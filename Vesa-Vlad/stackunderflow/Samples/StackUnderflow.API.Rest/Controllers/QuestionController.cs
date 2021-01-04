@@ -18,7 +18,7 @@ using System.Threading.Tasks;
 
 namespace StackUnderflow.API.AspNetCore.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("question")]
     [ApiController]
     public class QuestionController : ControllerBase
     {
@@ -44,7 +44,12 @@ namespace StackUnderflow.API.AspNetCore.Controllers
             var exp = from CreateQuestionResult in QuestionContext.CreateQuestion(cmd)
                       select CreateQuestionResult;
             var r = await _interpreter.Interpret(exp, ctx, dependencies);
+            _dbContext.SaveChanges();
 
+            return r.Match(
+                created => (IActionResult)Ok("Question posted"),
+                notCreated => StatusCode(StatusCodes.Status500InternalServerError, "Question could not be posted.")
+                );
         }
 
         private TryAsync<SendConfirmationAck> SendEmail(SendConfirmationLetter letter)
